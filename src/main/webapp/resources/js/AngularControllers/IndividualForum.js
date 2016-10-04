@@ -3,7 +3,7 @@ app.controller('IndividualForum', [ '$scope', '$http', function($scope, $http) {
 	    $scope.commentDesc = '';
 	    $scope.c_fid=document.getElementById("fid").value;
 	    $scope.Comment = function() {
-			var BASE_URL = 'http://localhost:8085/Babblers';
+			var BASE_URL = 'http://localhost:8081/fb';
 			$scope.comment = {	
 				c_fid : $scope.c_fid,
 				commentDesc : $scope.commentDesc,
@@ -18,6 +18,16 @@ app.controller('IndividualForum', [ '$scope', '$http', function($scope, $http) {
 			}).error(function(data, status, headers, config) {
 				alert("Error");
 			});	
+		};
+		$scope.getAllForumComments = function() {
+			$http({
+				method : 'GET',
+				url : 'getAllComments'
+			}).success(function(data, status, headers, config) {
+				$scope.comments = data;// alert(data); 
+			}).error(function(data, status, headers, config) {
+				alert("Error");
+			});
 		};
 }]);
 

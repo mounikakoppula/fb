@@ -1,7 +1,7 @@
 app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
 	
 	$scope.submit = function() {
-		var BASE_URL = 'http://localhost:8085/Babblers';
+		var BASE_URL = 'http://localhost:8081/fb';
 		$scope.forum = {	
 			fid       : $scope.forumid,
 			forumName : $scope.forumName,
