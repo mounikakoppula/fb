@@ -1,6 +1,6 @@
 <style>
 .modal-header, h4, .close {
-	background-color: #5cb85c;
+	background-color: #191970;
 	color: white !important;
 	text-align: center;
 	font-size: 20px;
@@ -15,7 +15,7 @@
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header" style="padding: 15px 50px;">
-					<h4>Babbler Registration</h4>
+					<h4>ONLINE-HUB Registration</h4>
 				</div>
 				<div class="modal-body" style="padding: 30px 50px;">
 					<form role="form" data-ng-submit="submit()"
@@ -81,7 +81,7 @@
 						<p>By clicking Create an account, you agree to our Terms and
 							that you have read our Data Policy, including our Cookie Use.</p>
 						<br>
-						<button type="submit" class="btn btn-success  btn-block">
+						<button type="submit" class="btn btn-primary  btn-block">
 							<span class="glyphicon glyphicon-off"></span> Register
 						</button>
 					</form>

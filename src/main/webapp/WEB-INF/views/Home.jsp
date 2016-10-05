@@ -7,7 +7,7 @@
 
 <%@include file="/WEB-INF/includes/Frameworks.jsp"%>
 <script src="${pageContext.request.contextPath}/resources/js/AngularControllers/App.js"></script>
-<title>Babblers</title>
+<title>fb</title>
 </head>
 <body style="padding-top: 50px; margin-bottom: 75px">
 	<header><%@include file="/WEB-INF/includes/Header.jsp"%></header>
@@ -47,6 +47,7 @@
 			<li><a data-toggle="tab" href="#Forum">Forum</a></li>
 			<li><a data-toggle="tab" href="#Chat">Chat</a></li>
 		</ul>
+		
 		<div class="tab-content">
 			<div id="home" class="tab-pane fade">
 				<h3>HOME</h3>

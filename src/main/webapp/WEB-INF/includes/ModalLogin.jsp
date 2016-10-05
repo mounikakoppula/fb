@@ -1,10 +1,15 @@
 <style>
   .modal-header, h4, .close {
-      background-color: #5cb85c;
+      background-color: #191970;
       color:white !important;
       text-align: center;
-      font-size: 20px;
+      font-size: 15px;
   }
+  
+ .modal{
+  top:80px;
+ 
+ }
   </style>
 <div class="container"  >
 	<!-- Trigger the modal with a button -->
@@ -14,10 +19,10 @@
 
 			<!-- Modal content-->
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 15px 35px;">
-					<h4>Babbler Login</h4>
+				<div class="modal-header" style="padding: 10px 20px;">
+					<h4>ONLINE-HUB Login</h4>
 				</div>
-				<div class="modal-body" style="padding: 35px 35px;">
+				<div class="modal-body" style="padding: 15px 15px;">
 					<form action="${pageContext.request.contextPath}/perform_login" method="post">
 						<div class="form-group form-group-sm">
 
@@ -38,7 +43,7 @@
 							</div>
 							<br>
 						</div>
-						<button type="submit" class="btn btn-success  btn-block">
+						<button type="submit" class="btn btn-primary btn-block">
 							<span class="glyphicon glyphicon-off"></span> Log In
 						</button>
 					</form>

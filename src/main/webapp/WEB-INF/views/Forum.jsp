@@ -47,7 +47,7 @@
 						<div class="btn-group  btn-group-justified ">
 							<sec:authorize access="isAuthenticated()">
 								<a class="btn btn-primary btn-xs"
-									data-ng-click="deleteForum(forum.fid)">Delect</a>
+									data-ng-click="deleteForum(forum.fid)">Delete</a>
 
 								<a class="btn btn-primary btn-xs"
 									data-ng-click="editForum(forum.fid)">Edit</a>
