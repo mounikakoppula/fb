@@ -1,4 +1,5 @@
 app.controller('IndividualForum', [ '$scope', '$http', function($scope, $http) {
+	var BASE_URL = 'http://localhost:8081/fb';
 	
 	    $scope.commentDesc = '';
 	    $scope.c_fid=document.getElementById("fid").value;
@@ -22,7 +23,7 @@ app.controller('IndividualForum', [ '$scope', '$http', function($scope, $http) {
 		$scope.getAllForumComments = function() {
 			$http({
 				method : 'GET',
-				url : 'getAllComments'
+				url :BASE_URL + '/getAllComments/'
 			}).success(function(data, status, headers, config) {
 				$scope.comments = data;// alert(data); 
 			}).error(function(data, status, headers, config) {

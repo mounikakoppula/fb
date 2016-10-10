@@ -33,34 +33,32 @@
 				<tr>
 					<!-- <th>Forum ID</th> -->
 					<th>Forum Name</th>
-					<th>Forum Description</th>
-					<sec:authorize access="isAuthenticated()">
-						<th>Delete Forum</th>
-					</sec:authorize>
+					<th colspan="2">Forum Description</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="forum in forums">
 					<td width="15%">{{forum.forumName}}</td>
 					<td width="70%">{{forum.forumDesc}}</td>
-					<td width="20%">
+					<td width="10%">
 						<div class="btn-group  btn-group-justified ">
 							<sec:authorize access="isAuthenticated()">
-								<a class="btn btn-primary btn-xs"
-									data-ng-click="deleteForum(forum.fid)">Delete</a>
-
-								<a class="btn btn-primary btn-xs"
-									data-ng-click="editForum(forum.fid)">Edit</a>
+								<div data-ng-if="accessForum(forum.f_userid)">
+									<a class="btn btn-primary btn-xs"
+										data-ng-click="deleteForum(forum.fid)">Delete</a> 
+									<a	class="btn btn-primary btn-xs"
+										data-ng-click="editForum(forum.fid)">Edit</a>
+								</div>
 							</sec:authorize>
-							<a href="forum/{{forum.fid}}" class="btn btn-primary btn-xs">View</a>
-						</div>
+						</div>	
 					</td>
+					<td width="5%"><a href="forum/{{forum.fid}}" class="btn btn-primary btn-xs">View</a></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+<input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
 
-	<script
-		src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
+
+	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/Forum.js"></script>
 </div>
-

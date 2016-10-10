@@ -29,30 +29,30 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>Blog ID</th>
+				<!-- <th>Blog ID</th> -->
 					<th>Blog Name</th>
-					<th>Blog Description</th>
-					<sec:authorize access="isAuthenticated()">   
-						<th>Delete Blog</th>
-						<th>Edit Blog</th>
-					</sec:authorize>
+					<th colspan="2"Blog Description></th>
+			
 				</tr>
 			</thead>
 			<tbody>
 				<tr data-ng-repeat="blog in blogs">
-					<td>{{blog.bid}}</td>
-					<td>{{blog.blogName}}</td>
-					<td>{{blog.blogDesc}}</td>
+					<!--  <td>{{blog.bid}}</td>  -->
+					<td width="15%">{{blog.blogName}}</td>
+					<td width="70%">{{blog.blogDesc}}</td>
+					<td width=10%">
+					<div class="btn-group btn-group-justified"></div>
 					<sec:authorize access="isAuthenticated()">
-						<td><button data-ng-click="deleteBlog(blog.bid)"
-								class="btn btn-xs  btn-block btn-danger">Delete</button></td>
-						<td><button data-ng-click="editBlog(blog.bid)"
-								class="btn btn-xs  btn-block btn-info">Edit</button></td>
+						<div data-ng-if="accessBlog(blog.b_userid)"></div>
+						<a class="btn btn-primary btn-xs"
+						    data-ng-click="deleteBlog(blog.bid)">Edit</a>
 					</sec:authorize>
+					<td width="5%"><a href="blog/{{blog.bid}}" class="btn btn-primary btn-xs">View</a>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+	<input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
 	
 	<script
 		src="${pageContext.request.contextPath}/resources/js/AngularControllers/Blog.js"></script>

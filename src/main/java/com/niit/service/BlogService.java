@@ -17,4 +17,6 @@ public interface BlogService {
 	
 	/*Edit individual blog based on blog id*/
 	public Blog editBlog(int blogid);
+
+	public Object getSingleBlog(int bid);
 }

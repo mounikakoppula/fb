@@ -49,4 +49,10 @@ public class BlogServiceImpl implements BlogService{
 	{
 		 return blogDAO.getBlog(blogid);
 	}
+
+	@Override
+	public Object getSingleBlog(int bid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
