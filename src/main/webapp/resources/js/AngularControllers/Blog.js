@@ -1,9 +1,10 @@
 app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
 	var BASE_URL = 'http://localhost:8081/fb';
+	$scope.userid=document.getElementById("userid").value; 
 	$scope.submit = function() {
 		var BASE_URL = 'http://localhost:8081/fb';
 		$scope.blog = {	
-			bid       : $scope.blogid,
+			bid      : $scope.blogid,
 			blogName : $scope.blogName,
 			blogDesc : $scope.blogDesc,
 		}
@@ -32,7 +33,16 @@ app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
 			alert("Error");
 		});
 	};
-	
+	$scope.getSingleBlog = function() {
+		$http({
+			method : 'GET',
+			url : 'blog'
+		}).success(function(data, status, headers, config) {
+			$scope.blogs = data;// alert(data); 
+		}).error(function(data, status, headers, config) {
+			alert("Error");
+		});
+	};
 	
 	$scope.deleteBlog = function(bid) {
 		$http({
@@ -62,14 +72,13 @@ app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
 	
 	$scope.accessBlog = function(b_userid) {
 		//alert("Hello"+b_userid);
-		if($scope.userid==b_userid)
+		if($scope.userid==b_userid) 
 		{
 			console.log($scope.userid);
 			return true;
-			console.log("true")
+			console.log("true");
 		}
-		else
-		{
+		else {
 			return false;
 			console.log("false");
 		}

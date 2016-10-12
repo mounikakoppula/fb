@@ -3,12 +3,11 @@
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<div ><!--  data-ng-controller="IndividualBlog" -->
-	<div style="margin-top: 20px">
+<!--  <div data-ng-controller="IndividualBlog">  -->
+	<div style="margin-top: 20px;border: 5px;border-color: blue">
 		<c:if test="${!empty blogList}">
 			<c:forEach items="${blogList}" var="blog">
-			<div hidden="true">
-				
+				<div  hidden="true">
 					<p style="padding: 10px; font-size: large">
 						<input type="number" value="${blog.bid}" id="bid">
 					</p>
@@ -23,10 +22,11 @@
 				</div>
 			</c:forEach>
 		</c:if>
+		
 	</div>
 	
+	<input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
+	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/IndividualBlog.js"></script>
 	
 
-
-	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/IndividualBlog.js"></script>
 </div>

@@ -56,6 +56,7 @@
 				</tr>
 			</tbody>
 		</table>
+		<input type="text" value="${sessionScope.userid}" id="userid" hidden="true">
 	</div>
 <input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
 

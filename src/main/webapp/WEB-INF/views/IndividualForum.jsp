@@ -54,18 +54,7 @@
 				<tr data-ng-repeat="comment in comments">
 					<td width="80%">{{comment.commentDesc}}</td>
 					<td width="20%">{{comment.commenttime}}</td>
-					<%-- <td width="20%">
-						<div class="btn-group  btn-group-justified ">
-							<sec:authorize access="isAuthenticated()">
-								<a class="btn btn-primary btn-xs"
-									data-ng-click="deleteForum(forum.fid)">Delect</a>
-
-								<a class="btn btn-primary btn-xs"
-									data-ng-click="editForum(forum.fid)">Edit</a>
-							</sec:authorize>
-							<a href="forum/{{forum.fid}}" class="btn btn-primary btn-xs">View</a>
-						</div>
-					</td> --%>
+			
 				</tr>
 			</tbody>
 		</table>
