@@ -1,8 +1,8 @@
 app.controller('BlogController', [ '$scope', '$http', function($scope, $http) {
-	var BASE_URL = 'http://localhost:8081/fb';
+	var BASE_URL = 'http://localhost:8081/onlinehub';
 	$scope.userid=document.getElementById("userid").value; 
 	$scope.submit = function() {
-		var BASE_URL = 'http://localhost:8081/fb';
+		var BASE_URL = 'http://localhost:8081/onlinehub';
 		$scope.blog = {	
 			bid      : $scope.blogid,
 			blogName : $scope.blogName,

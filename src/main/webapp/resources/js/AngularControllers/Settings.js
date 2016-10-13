@@ -1,5 +1,5 @@
 app.controller('UserImage', [ '$scope', '$http', function($scope, $http) {
-	var BASE_URL = 'http://localhost:8081/fb';
+	var BASE_URL = 'http://localhost:8081/onlinehub';
 
 	$scope.uploadFile = function(files) {
 	    var image = new FormData();

@@ -1,10 +1,10 @@
 app.controller('IndividualForum', [ '$scope', '$http', function($scope, $http) {
-	var BASE_URL = 'http://localhost:8081/fb';
+	var BASE_URL = 'http://localhost:8081/onlinehub';
 	
 	    $scope.commentDesc = '';
 	    $scope.c_fid=document.getElementById("fid").value;
 	    $scope.Comment = function() {
-			var BASE_URL = 'http://localhost:8081/fb';
+			var BASE_URL = 'http://localhost:8081/onlinehub';
 			$scope.comment = {	
 				c_fid : $scope.c_fid,
 				commentDesc : $scope.commentDesc,

@@ -1,9 +1,9 @@
 app.controller('ForumController', [ '$scope', '$http', function($scope, $http) {
-	var BASE_URL = 'http://localhost:8081/fb';
+	var BASE_URL = 'http://localhost:8081/onlinehub';
 	$scope.userid=document.getElementById("userid").value;
 	
 	$scope.submit = function() {
-		var BASE_URL = 'http://localhost:8081/fb';
+		var BASE_URL = 'http://localhost:8081/onlinehub';
 		$scope.forum = {	
 			fid       : $scope.forumid,
 			forumName : $scope.forumName,
