@@ -1,5 +1,5 @@
 app.controller('RegController', [ '$scope', '$http', function($scope, $http) {
-
+	var BASE_URL = 'http://localhost:8081/onlinehub';
 	$scope.submit = function() {
 		var BASE_URL = 'http://localhost:8081/onlinehub';
 		$scope.users = {

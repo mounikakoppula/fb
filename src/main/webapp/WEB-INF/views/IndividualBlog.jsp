@@ -4,6 +4,7 @@
 	uri="http://www.springframework.org/security/tags"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!--  <div data-ng-controller="IndividualBlog">  -->
+<div>
 	<div style="margin-top: 20px;border: 5px;border-color: blue">
 		<c:if test="${!empty blogList}">
 			<c:forEach items="${blogList}" var="blog">
@@ -27,6 +28,6 @@
 	
 	<input type="text" value="${sessionScope.userid}" style="margin-top: 75px" id="userid" hidden="true" />
 	<script src="${pageContext.request.contextPath}/resources/js/AngularControllers/IndividualBlog.js"></script>
-	
+
 
 </div>
